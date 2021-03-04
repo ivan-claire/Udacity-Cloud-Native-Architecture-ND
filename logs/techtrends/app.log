@@ -1,0 +1,108 @@
+2021-03-01 00:17:04 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-01 00:17:09 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 71, in metrics
+    db_connection_count = count.decode('utf-8')
+AttributeError: 'dict' object has no attribute 'decode'
+2021-03-01 00:17:09 INFO     127.0.0.1 - - [01/Mar/2021 00:17:09] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-03-01 00:22:14 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-01 00:22:20 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 73, in metrics
+    db_connection_count=json.loads(db_connection_count.decode("utf-8"))
+UnboundLocalError: local variable 'db_connection_count' referenced before assignment
+2021-03-01 00:22:20 INFO     127.0.0.1 - - [01/Mar/2021 00:22:20] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-03-01 00:22:53 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-01 00:22:56 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 73, in metrics
+    db_connection_count=json.loads(count.decode("utf-8"))
+AttributeError: 'dict' object has no attribute 'decode'
+2021-03-01 00:22:56 INFO     127.0.0.1 - - [01/Mar/2021 00:22:56] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-03-01 19:53:13 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-04 06:35:12 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-04 06:35:56 INFO     127.0.0.1 - - [04/Mar/2021 06:35:56] "GET / HTTP/1.1" 200 -
+2021-03-04 06:35:56 INFO     127.0.0.1 - - [04/Mar/2021 06:35:56] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-03-04 06:35:56 INFO     127.0.0.1 - - [04/Mar/2021 06:35:56] "GET /favicon.ico HTTP/1.1" 404 -
+2021-03-04 06:36:07 INFO     Article 2020 CNCF Annual Report retrieved!
+2021-03-04 06:36:07 INFO     127.0.0.1 - - [04/Mar/2021 06:36:07] "GET /1 HTTP/1.1" 200 -
+2021-03-04 06:36:40 INFO     Non-existing article is accessed
+2021-03-04 06:36:40 INFO     127.0.0.1 - - [04/Mar/2021 06:36:40] "GET /100 HTTP/1.1" 404 -
+2021-03-04 06:37:13 INFO     The "About Us" page is retrieved.
+2021-03-04 06:37:13 INFO     127.0.0.1 - - [04/Mar/2021 06:37:13] "GET /about HTTP/1.1" 200 -
+2021-03-04 06:37:20 INFO     127.0.0.1 - - [04/Mar/2021 06:37:20] "GET /create HTTP/1.1" 200 -
+2021-03-04 06:37:36 INFO     A new article is created with title: Who Runs the World
+2021-03-04 06:37:36 INFO     127.0.0.1 - - [04/Mar/2021 06:37:36] "POST /create HTTP/1.1" 302 -
+2021-03-04 06:37:36 INFO     127.0.0.1 - - [04/Mar/2021 06:37:36] "GET / HTTP/1.1" 200 -
+2021-03-04 06:42:52 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-04 06:43:07 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ivan-clare/.local/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 75, in metrics
+    db_connect_count = db_connection_count.get('value')
+NameError: name 'db_connection_count' is not defined
+2021-03-04 06:43:07 INFO     127.0.0.1 - - [04/Mar/2021 06:43:07] "GET /metrics HTTP/1.1" 500 -
+2021-03-04 07:23:25 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-03-04 07:23:58 INFO     172.17.0.1 - - [04/Mar/2021 07:23:58] "GET / HTTP/1.1" 200 -
+2021-03-04 07:24:01 INFO     Article 2020 CNCF Annual Report retrieved!
+2021-03-04 07:24:01 INFO     172.17.0.1 - - [04/Mar/2021 07:24:01] "GET /1 HTTP/1.1" 200 -
+2021-03-04 07:24:05 INFO     Article KubeCon + CloudNativeCon 2021 retrieved!
+2021-03-04 07:24:05 INFO     172.17.0.1 - - [04/Mar/2021 07:24:05] "GET /2 HTTP/1.1" 200 -
+2021-03-04 07:24:08 INFO     The "About Us" page is retrieved.
+2021-03-04 07:24:08 INFO     172.17.0.1 - - [04/Mar/2021 07:24:08] "GET /about HTTP/1.1" 200 -
+2021-03-04 07:24:14 INFO     172.17.0.1 - - [04/Mar/2021 07:24:14] "GET /create HTTP/1.1" 200 -
+2021-03-04 07:24:21 INFO     A new article is created with title: Vaccines Ready
+2021-03-04 07:24:21 INFO     172.17.0.1 - - [04/Mar/2021 07:24:21] "POST /create HTTP/1.1" 302 -
+2021-03-04 07:24:21 INFO     172.17.0.1 - - [04/Mar/2021 07:24:21] "GET / HTTP/1.1" 200 -
+2021-03-04 07:24:26 INFO     Status request successfull
+2021-03-04 07:24:26 INFO     172.17.0.1 - - [04/Mar/2021 07:24:26] "GET /healthz HTTP/1.1" 200 -
+2021-03-04 07:24:31 INFO     172.17.0.1 - - [04/Mar/2021 07:24:31] "GET /metrics HTTP/1.1" 200 -
+2021-03-04 07:24:35 INFO     Non-existing article is accessed
+2021-03-04 07:24:35 INFO     172.17.0.1 - - [04/Mar/2021 07:24:35] "GET /56 HTTP/1.1" 404 -

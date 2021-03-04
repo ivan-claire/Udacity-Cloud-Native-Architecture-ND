@@ -1,0 +1,12 @@
+2021-02-28 23:26:39 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-02-28 23:26:46 INFO     127.0.0.1 - - [28/Feb/2021 23:26:46] "[37mGET / HTTP/1.1[0m" 200 -
+2021-02-28 23:27:02 INFO     Article KubeCon + CloudNativeCon 2021 retrieved!
+2021-02-28 23:27:02 INFO     127.0.0.1 - - [28/Feb/2021 23:27:02] "[37mGET /2 HTTP/1.1[0m" 200 -
+2021-02-28 23:27:07 INFO     Non-existing article is accessed
+2021-02-28 23:27:07 INFO     127.0.0.1 - - [28/Feb/2021 23:27:07] "[33mGET /24 HTTP/1.1[0m" 404 -
+2021-02-28 23:27:12 INFO     The "About Us" page is retrieved.
+2021-02-28 23:27:12 INFO     127.0.0.1 - - [28/Feb/2021 23:27:12] "[37mGET /about HTTP/1.1[0m" 200 -
+2021-02-28 23:27:18 INFO     127.0.0.1 - - [28/Feb/2021 23:27:18] "[37mGET /create HTTP/1.1[0m" 200 -
+2021-02-28 23:28:03 INFO     A new article is created with title: Breaking News
+2021-02-28 23:28:03 INFO     127.0.0.1 - - [28/Feb/2021 23:28:03] "[32mPOST /create HTTP/1.1[0m" 302 -
+2021-02-28 23:28:03 INFO     127.0.0.1 - - [28/Feb/2021 23:28:03] "[37mGET / HTTP/1.1[0m" 200 -
