@@ -4,7 +4,7 @@ name: TechTrends - Package with Docker
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -30,8 +30,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
          context: .
-          push: true
-          tags: awony/techtrends:latest
+         push: true
+         tags: awony/techtrends:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
