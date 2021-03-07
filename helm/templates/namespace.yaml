@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2021-03-04T20:12:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:phase: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2021-03-04T20:12:06Z"
+  name: sandbox
+  resourceVersion: "141158"
+  selfLink: /api/v1/namespaces/sandbox
+  uid: 7d20d959-9812-4570-a271-c0fccfeb553b
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: techtrends
+  name: techtrends
+  namespace: {{ .Values.namespace_name }} 
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: techtrends
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: techtrends
+    spec:
+      containers:
+      - image: awony/{{ .Values.image.repository }}:{{ .Values.image.tag }} 
+        name: techtrends
+        resources: 
+          limits:
+            cpu:  {{ .Values.resources.limits.CPU }}
+            memory: {{ .Values.resources.limits.memory }}
+          requests:
+            cpu: {{ .Values.resources.requests.CPU }}
+            memory: {{ .Values.resources.requests.memory }}
+        ports:
+        - containerPort: {{ .Values.containerPort }}
+        livenessProbe:
+          httpGet:
+             path:  {{ .Values.livenessProbePath }} 
+             port: {{ .Values.containerPort }}
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.readinessProbePath }}
+            port:  {{ .Values.containerPort }} 
+        imagePullPolicy:  {{ .Values.image.pullPolicy }} 
+status: {}
